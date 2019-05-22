@@ -1,8 +1,11 @@
 class Person < ApplicationRecord
     has_many :animals
 
+    MAX_VALUE_TO_BUY = 1000.00
+    OF_AGE = 18
+
     def of_age?
-        self.birthdate.year < (Time.zone.now - 18.years).year
+        self.birthdate.year < (Time.zone.now - OF_AGE.years).year
     end
 
     def can_buy_andorinha?
@@ -14,6 +17,6 @@ class Person < ApplicationRecord
     end
 
     def can_buy_more_animals?
-        return true if self.animals.pluck(:monthly_cost).sum < 1000.00
+        return true if Animal.where(owner: self.name).pluck(:monthly_cost).sum < MAX_VALUE_TO_BUY
     end
 end

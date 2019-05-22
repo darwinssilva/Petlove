@@ -4,6 +4,7 @@ class CreatePeople < ActiveRecord::Migration[5.0]
       t.string :name
       t.integer :document
       t.date :birthdate
+      t.string :owner
 
       t.timestamps
     end

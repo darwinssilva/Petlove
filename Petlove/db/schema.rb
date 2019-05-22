@@ -10,21 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190522124028) do
+ActiveRecord::Schema.define(version: 20190522122548) do
 
   create_table "animals", force: :cascade do |t|
     t.string   "name"
     t.float    "monthly_cost"
     t.string   "animal_type"
+    t.string   "owner"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
-    t.integer  "person_id"
   end
 
   create_table "people", force: :cascade do |t|
     t.string   "name"
     t.integer  "document"
     t.date     "birthdate"
+    t.string   "owner"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
