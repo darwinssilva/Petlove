@@ -1,12 +1,15 @@
 # Petlove
 
 *Qual é o custo médio dos animais do tipo cachorro?
+
 `Animal.where(animal_type: 'Cachorro').average(:monthly_cost)`
 
 *Quantos cachorros existem no sistema?
+
 `Animal.where(animal_type: 'Cachorro').count`
 
 *Qual o nome dos donos dos cachorros (Array de nomes)
+
 `Person.joins(:animals).where("animals.animal_type = 'Cachorro'").pluck(:name)`
 
 *Retorne as pessoas ordenando pelo custo que elas tem com os animais (Maior para menor)
