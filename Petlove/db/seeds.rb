@@ -12,12 +12,12 @@ puts '########################'
 
 puts 'Criando animais no banco'
 
-Animal.create(name: 'Pé de Pano',	monthly_cost: 199.99, animal_type: 'Cavalo', owner: 'Jhonny Cash')
-Animal.create(name: 'Rex',	monthly_cost: 99.99, animal_type: 'Cachorro', owner: 'Sid Vicious')
-Animal.create(name: 'Ajudante do Papai Noel',	monthly_cost: 99.99, animal_type: 'Cachorro', owner: 'Axl Rose')
-Animal.create(name: 'Rex',	monthly_cost: 103.99, animal_type: 'Papagaio', owner: 'Joey Ramone')
-Animal.create(name: 'Flora',	monthly_cost: 103.99, animal_type: 'Lhama', owner: 'Bruce Dickinson')
-Animal.create(name: 'Dino',	monthly_cost: 177.99, animal_type: 'Iguana', owner: 'Kurt Cobain')
-Animal.create(name: 'Lassie',	monthly_cost: 407.99, animal_type: 'Ornitorrinco', owner: 'Elvis Presley')
+Animal.create(name: 'Pé de Pano',	monthly_cost: 199.99, animal_type: 'Cavalo', person_id: Person.find_by(name: 'Jhonny Cash').id)
+Animal.create(name: 'Rex',	monthly_cost: 99.99, animal_type: 'Cachorro', person_id: Person.find_by(name: 'Sid Vicious').id)
+Animal.create(name: 'Ajudante do Papai Noel',	monthly_cost: 99.99, animal_type: 'Cachorro', person_id: Person.find_by(name: 'Axl Rose').id)
+Animal.create(name: 'Rex',	monthly_cost: 103.99, animal_type: 'Papagaio', person_id: Person.find_by(name: 'Joey Ramone').id)
+Animal.create(name: 'Flora',	monthly_cost: 103.99, animal_type: 'Lhama', person_id: Person.find_by(name: 'Bruce Dickinson').id)
+Animal.create(name: 'Dino',	monthly_cost: 177.99, animal_type: 'Iguana', person_id: Person.find_by(name: 'Kurt Cobain').id)
+Animal.create(name: 'Lassie',	monthly_cost: 407.99, animal_type: 'Ornitorrinco', person_id: Person.find_by(name: 'Elvis Presley').id)
 
 puts '########################'

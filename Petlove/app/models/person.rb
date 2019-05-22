@@ -17,6 +17,6 @@ class Person < ApplicationRecord
     end
 
     def can_buy_more_animals?
-        return true if Animal.where(owner: self.name).pluck(:monthly_cost).sum < MAX_VALUE_TO_BUY
+        return true if self.animals.sum(:monthly_cost) < MAX_VALUE_TO_BUY
     end
 end
