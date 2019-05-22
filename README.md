@@ -1,4 +1,4 @@
-# petlove
+# Petlove
 
 *Qual é o custo médio dos animais do tipo cachorro?
 `Animal.where(animal_type: 'Cachorro').average(:monthly_cost)`
